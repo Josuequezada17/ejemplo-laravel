@@ -1,0 +1,260 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: #FF5F40;
+}
+
+.nav{
+    width: 940px;
+    position: relative;
+    margin: 0 auto; /*el primer numeor es de los bordes y el siguiente de arriba y abajo*/
+    padding: 20px 0;
+}
+
+.img-titulo{
+    display: inline-flex;
+}
+
+#logoPrincipal{
+    width:150px; 
+    height:150px;
+}
+
+.nombre{
+    padding-left: 20px;
+    margin: 60px 0px;
+}
+
+.titulo-principal{
+    padding-left: 30px;
+ }
+
+nav{
+    position: absolute;
+    top: 60px;
+    right: 60px;
+ }
+ 
+ nav li{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+    display: inline;
+    margin: 0 0 0 15px;
+    font-weight: bold;
+ }
+ 
+ nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+ }
+ 
+ nav a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bolder;
+ }
+
+.parrafo{
+    text-align: center;
+ }
+
+ .about_me, .column-knowledge-strenghts, .projects, .goggins{
+    padding: 1em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+    font-size: 20px;
+
+}
+
+
+.about_me p{
+    margin: 0 0 1em;
+}
+
+.about_me strong{
+    font-weight: bold;
+}
+
+.about_me em{
+    font-style: italic;
+}
+
+.column-knowledge-strenghts{
+    display: flex;
+    justify-content: space-between;
+}
+
+.knowledge_txt, .strenghts_txt{
+    color: #03585B;
+}
+
+.knowledge, .strenghts {
+    flex: 1;
+    padding: 1em;
+}
+
+.projects tr th{
+    background-color:rgba(90, 70, 70, 0.5);
+    color:#030303;
+    padding: 20px 0px;
+}
+
+.table-row{
+    font-weight: bold;
+    color: rgb(6, 25, 131);
+}
+
+.projects tr td{
+    padding: 0px 20px;
+}
+
+.persona-admiro{
+    text-align: center;
+    font-size: 50px;
+    color: #24a19c;
+    background-color: rgb(83, 78, 78);
+    border-radius: 25px;
+}
+
+.column-goggins{
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.txt-goggins, .img-goggins{
+    flex: 1;
+    padding: 1em;
+}
+
+.img-goggins{
+    width:450px; 
+    height:550px;
+}
+
+.txt-goggins{
+    font-size: 25px;
+}
+
+.footer{
+    text-align: center;
+   /* background: url(img/tools-and-utensils.png);*/
+    padding: 40px;
+    background: linear-gradient(#fefefe, #383737);
+
+
+}
+
+.img-footer{
+    width:100px; 
+    height:100px;
+}
+
+.textEndPage{
+    color: #FFFFFF;
+    font-size: 15px;
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*Formulario*/
+
+.inputPadron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+form{
+    margin: 40px;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: black;
+}
+
+.FieldIB{
+    display: inline;
+    width: 30%;
+    flex: 1;
+    padding: 1em;
+}
+
+fieldset{
+    border: none;
+}
+
+.checkbox{
+    margin: 20px 0;
+    cursor: pointer;
+    border-style: none;
+}
+
+select option{
+    font-size: 18px;
+    margin: auto;
+    box-sizing: content-box;
+}
+
+.enviar{
+    margin: 0 25px;
+    width:  40%;
+    padding:  15px 0;
+    font-size:  18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: rgb(255, 0, 0);
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s all;
+    cursor: pointer ;
+}
+
+.enviar:hover{
+    background: rgb(107, 11, 11);
+    transform: scale(1.2);
+}
+
+
+ @media screen and (max-width:480px) { /*exepcion*/
+    /*Index*/
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }    
+
+    .nav, .principal, .mapaContenido, .contenidoDiferenciales, .video{
+        width: auto;
+    }
+    
+    /*Contacto*/
+    .inputPadron{
+        width: -webkit-fill-available;
+    }
+    .enviar{
+        width: -webkit-fill-available;
+        margin: auto;
+    }
+
+    table{
+        width: auto;
+        margin: auto;
+    }
+}
