@@ -9,7 +9,7 @@
 <a href="/informacion">Informacion</a>
 
 
-    <form action="/contacto-clase" method="POST">
+    <form action="/comentario" method="POST">
         @csrf <!--token para asegurarnos que nuestro formulario venga desde nuestra pagina-->
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre">
