@@ -9,7 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up(): void //Funcion para mandar nuestros datos a la base de datos
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id();

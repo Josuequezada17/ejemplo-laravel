@@ -10,7 +10,6 @@ class SitioController extends Controller
     public function info ($tipo = null){
         return view('info', compact('tipo'));
     }
-
-   
+  
 }
 

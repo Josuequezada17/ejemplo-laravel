@@ -7,24 +7,34 @@
 </head>
 <body>
 <a href="/informacion">Informacion</a>
+<a href="{{ route('comentario.index') }}">Listado</a>
 
-
-    <form action="/comentario" method="POST">
+    @include('parciales.formError')
+    <form action="{{ route('comentario.store') }}" method="POST">
         @csrf <!--token para asegurarnos que nuestro formulario venga desde nuestra pagina-->
+        
         <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre">
+        <input type="text" name="nombre" value="{{ old('nombre') }}">
+        @error('nombre')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
         <br>
+
         <label for="correo">Correo:</label>
-        <input type="email" name="correo">
-        <label for="correo">Comentario:</label>
-        <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+        <input type="email" name="correo" value="{{ old('correo') }}">
         <br>
+
+        <label for="comentario">Comentario:</label>
+        <br>
+        <textarea name="comentario" id="" cols="30" rows="10">{{ old('comentario') }}</textarea>
+        <br>
+
         <select name="ciudad" id="ciudad">
-            <option value="GDL">GDL</option>
-            <option value="TONALA">TONALA</option>
-            <option value="ZAPOPAN">ZAPOPAN</option>
-            <option value="TLAQUEPAQUE">TLAQUEPAQUE</option>
-            <option value="TLAJOMULCO">TLAJOMULCO</option>
+            <option value="GDL" @selected(old('ciudad') == 'GDL')>GDL</option>
+            <option value="TONALA" @selected(old('ciudad') == 'TONALA')>TONALA</option>
+            <option value="ZAPOPAN" @selected(old('ciudad') == 'ZAPOPAN')>ZAPOPAN</option>
+            <option value="TLAQUEPAQUE" @selected(old('ciudad') == 'TLAQUEPAQUE')>TLAQUEPAQUE</option>
+            <option value="TLAJOMULCO" @selected(old('ciudad') == 'TLAJOMULCO')>TLAJOMULCO</option>
         </select>
 
         <input type="submit" value="Enviar">
